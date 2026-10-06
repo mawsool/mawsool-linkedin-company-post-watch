@@ -1,0 +1,132 @@
+{
+  "actorSpecification": 1,
+  "title": "LinkedIn Company Post Monitor",
+  "description": "One result row. A URL is charged once even when it produces several rows.",
+  "fields": {
+    "type": "object",
+    "properties": {
+      "inputUrl": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "inputUrl"
+      },
+      "companyName": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "companyName"
+      },
+      "changeType": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "changeType"
+      },
+      "postCount": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "postCount"
+      },
+      "postId": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "postId"
+      },
+      "postUrl": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "postUrl"
+      },
+      "postedAt": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "postedAt"
+      },
+      "text": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "text"
+      },
+      "reactions": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "reactions"
+      },
+      "comments": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "comments"
+      },
+      "hashtags": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "hashtags"
+      },
+      "taggedCompanies": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "taggedCompanies"
+      },
+      "taggedPeople": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "taggedPeople"
+      },
+      "success": {
+        "type": "boolean",
+        "title": "success"
+      }
+    }
+  },
+  "views": {
+    "flat": {
+      "title": "Flat results",
+      "transformation": {
+        "fields": [
+          "inputUrl",
+          "companyName",
+          "changeType",
+          "postCount",
+          "postId",
+          "postUrl",
+          "postedAt",
+          "text",
+          "reactions",
+          "comments",
+          "hashtags",
+          "taggedCompanies",
+          "taggedPeople",
+          "success"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {}
+      }
+    }
+  }
+}

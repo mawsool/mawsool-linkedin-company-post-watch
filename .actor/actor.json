@@ -1,0 +1,38 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-linkedin-company-post-watch",
+  "title": "LinkedIn Company Post Monitor",
+  "description": "Watch LinkedIn company pages for new posts. The first run saves the posts already on the page. Later scheduled runs return only new posts. From $1 per 1,000 companies per run.",
+  "seoTitle": "LinkedIn Company Post Monitor",
+  "seoDescription": "Monitor LinkedIn company pages and get only new posts on the next run. $1 per 1,000 companies per run.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 21600,
+    "memoryMbytes": 256
+  },
+  "environmentVariables": {
+    "ACTOR_SLICE": "post-watch",
+    "CHARGE_EVENT": "company-post-check",
+    "COMPANY_API_KEY": "@mawsoolCompanyApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
